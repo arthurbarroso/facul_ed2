@@ -1,0 +1,16 @@
+**/*.exe
+.projectile
+e.dSYM
+.vscode
+*.o
+output
+.cache
+compile_commands.json
+**/CMakeFiles/
+**/cmake_install.cmake
+**/CMakeCache.txt
+out
+src/**/Makefile
+_deps
+Testing
+CTestTestfile.cmake
