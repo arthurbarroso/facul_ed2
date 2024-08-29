@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MAX_STACK_SIZE 80
+
 Node *new_node(int val) {
   Node *temp = (struct node *)malloc(sizeof(struct node));
   temp->val = val;
@@ -157,7 +159,6 @@ void postorder(Node *node) {
   }
 }
 
-// coisas novas..
 Stack *create_stack(int capacity) {
   Stack *stack = (Stack *)malloc(sizeof(Stack));
   stack->capacity = capacity;
@@ -192,7 +193,7 @@ Node *peek(Stack *stack) {
 
 void traverse_inorder(Node *root) {
   Node *temp_node = root;
-  Stack *stack = create_stack(80);
+  Stack *stack = create_stack(MAX_STACK_SIZE);
   bool flag = true;
   while (flag) {
     if (temp_node) {
@@ -212,7 +213,7 @@ void traverse_inorder(Node *root) {
 
 void traverse_preorder(Node *root) {
   Node *temp_node = root;
-  Stack *stack = create_stack(80);
+  Stack *stack = create_stack(MAX_STACK_SIZE);
   bool flag = true;
   while (flag) {
     if (temp_node) {
@@ -234,7 +235,7 @@ void traverse_postorder(Node *root) {
   if (root == NULL)
     return;
 
-  Stack *stack = create_stack(80);
+  Stack *stack = create_stack(MAX_STACK_SIZE);
   do {
     while (root) {
       if (root->right)

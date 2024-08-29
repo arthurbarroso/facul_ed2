@@ -27,7 +27,7 @@ int main() {
   print_tree(root);
   printf("\n=======");
 
-  /* printf("\n======="); */
+  printf("\n======= Traversal (no recursion)");
 
   printf("\n -- postorder:");
   traverse_postorder(root);
