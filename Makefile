@@ -127,6 +127,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named arthur_core
+
+# Build rule for target.
+arthur_core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 arthur_core
+.PHONY : arthur_core
+
+# fast build rule for target.
+arthur_core/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/arthur_core.dir/build.make CMakeFiles/arthur_core.dir/build
+.PHONY : arthur_core/fast
+
+#=============================================================================
+# Target rules for targets named tree_lib
+
+# Build rule for target.
+tree_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_lib
+.PHONY : tree_lib
+
+# fast build rule for target.
+tree_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_lib.dir/build.make CMakeFiles/tree_lib.dir/build
+.PHONY : tree_lib/fast
+
+#=============================================================================
 # Target rules for targets named tree
 
 # Build rule for target.
@@ -138,6 +164,32 @@ tree: cmake_check_build_system
 tree/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree.dir/build.make CMakeFiles/tree.dir/build
 .PHONY : tree/fast
+
+#=============================================================================
+# Target rules for targets named bst_test
+
+# Build rule for target.
+bst_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bst_test
+.PHONY : bst_test
+
+# fast build rule for target.
+bst_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst_test.dir/build.make CMakeFiles/bst_test.dir/build
+.PHONY : bst_test/fast
+
+#=============================================================================
+# Target rules for targets named student_lib
+
+# Build rule for target.
+student_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 student_lib
+.PHONY : student_lib
+
+# fast build rule for target.
+student_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_lib.dir/build.make CMakeFiles/student_lib.dir/build
+.PHONY : student_lib/fast
 
 #=============================================================================
 # Target rules for targets named student
@@ -153,30 +205,43 @@ student/fast:
 .PHONY : student/fast
 
 #=============================================================================
-# Target rules for targets named trees
+# Target rules for targets named avl_lib
 
 # Build rule for target.
-trees: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 trees
-.PHONY : trees
+avl_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 avl_lib
+.PHONY : avl_lib
 
 # fast build rule for target.
-trees/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trees.dir/build.make CMakeFiles/trees.dir/build
-.PHONY : trees/fast
+avl_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl_lib.dir/build.make CMakeFiles/avl_lib.dir/build
+.PHONY : avl_lib/fast
 
 #=============================================================================
-# Target rules for targets named bst_test
+# Target rules for targets named avl
 
 # Build rule for target.
-bst_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bst_test
-.PHONY : bst_test
+avl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 avl
+.PHONY : avl
 
 # fast build rule for target.
-bst_test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst_test.dir/build.make CMakeFiles/bst_test.dir/build
-.PHONY : bst_test/fast
+avl/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl.dir/build.make CMakeFiles/avl.dir/build
+.PHONY : avl/fast
+
+#=============================================================================
+# Target rules for targets named avl_test
+
+# Build rule for target.
+avl_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 avl_test
+.PHONY : avl_test
+
+# fast build rule for target.
+avl_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl_test.dir/build.make CMakeFiles/avl_test.dir/build
+.PHONY : avl_test/fast
 
 #=============================================================================
 # Target rules for targets named Experimental
@@ -581,6 +646,78 @@ checkShared/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/check-build/src/CMakeFiles/checkShared.dir/build.make _deps/check-build/src/CMakeFiles/checkShared.dir/build
 .PHONY : checkShared/fast
 
+src/arthur_core/arthur_core.o: src/arthur_core/arthur_core.c.o
+.PHONY : src/arthur_core/arthur_core.o
+
+# target to build an object file
+src/arthur_core/arthur_core.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/arthur_core.dir/build.make CMakeFiles/arthur_core.dir/src/arthur_core/arthur_core.c.o
+.PHONY : src/arthur_core/arthur_core.c.o
+
+src/arthur_core/arthur_core.i: src/arthur_core/arthur_core.c.i
+.PHONY : src/arthur_core/arthur_core.i
+
+# target to preprocess a source file
+src/arthur_core/arthur_core.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/arthur_core.dir/build.make CMakeFiles/arthur_core.dir/src/arthur_core/arthur_core.c.i
+.PHONY : src/arthur_core/arthur_core.c.i
+
+src/arthur_core/arthur_core.s: src/arthur_core/arthur_core.c.s
+.PHONY : src/arthur_core/arthur_core.s
+
+# target to generate assembly for a file
+src/arthur_core/arthur_core.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/arthur_core.dir/build.make CMakeFiles/arthur_core.dir/src/arthur_core/arthur_core.c.s
+.PHONY : src/arthur_core/arthur_core.c.s
+
+src/avl/avl.o: src/avl/avl.c.o
+.PHONY : src/avl/avl.o
+
+# target to build an object file
+src/avl/avl.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl_lib.dir/build.make CMakeFiles/avl_lib.dir/src/avl/avl.c.o
+.PHONY : src/avl/avl.c.o
+
+src/avl/avl.i: src/avl/avl.c.i
+.PHONY : src/avl/avl.i
+
+# target to preprocess a source file
+src/avl/avl.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl_lib.dir/build.make CMakeFiles/avl_lib.dir/src/avl/avl.c.i
+.PHONY : src/avl/avl.c.i
+
+src/avl/avl.s: src/avl/avl.c.s
+.PHONY : src/avl/avl.s
+
+# target to generate assembly for a file
+src/avl/avl.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl_lib.dir/build.make CMakeFiles/avl_lib.dir/src/avl/avl.c.s
+.PHONY : src/avl/avl.c.s
+
+src/avl/main.o: src/avl/main.c.o
+.PHONY : src/avl/main.o
+
+# target to build an object file
+src/avl/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl.dir/build.make CMakeFiles/avl.dir/src/avl/main.c.o
+.PHONY : src/avl/main.c.o
+
+src/avl/main.i: src/avl/main.c.i
+.PHONY : src/avl/main.i
+
+# target to preprocess a source file
+src/avl/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl.dir/build.make CMakeFiles/avl.dir/src/avl/main.c.i
+.PHONY : src/avl/main.c.i
+
+src/avl/main.s: src/avl/main.c.s
+.PHONY : src/avl/main.s
+
+# target to generate assembly for a file
+src/avl/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl.dir/build.make CMakeFiles/avl.dir/src/avl/main.c.s
+.PHONY : src/avl/main.c.s
+
 src/bst/main.o: src/bst/main.c.o
 .PHONY : src/bst/main.o
 
@@ -610,8 +747,7 @@ src/bst/tree.o: src/bst/tree.c.o
 
 # target to build an object file
 src/bst/tree.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree.dir/build.make CMakeFiles/tree.dir/src/bst/tree.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trees.dir/build.make CMakeFiles/trees.dir/src/bst/tree.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_lib.dir/build.make CMakeFiles/tree_lib.dir/src/bst/tree.c.o
 .PHONY : src/bst/tree.c.o
 
 src/bst/tree.i: src/bst/tree.c.i
@@ -619,8 +755,7 @@ src/bst/tree.i: src/bst/tree.c.i
 
 # target to preprocess a source file
 src/bst/tree.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree.dir/build.make CMakeFiles/tree.dir/src/bst/tree.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trees.dir/build.make CMakeFiles/trees.dir/src/bst/tree.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_lib.dir/build.make CMakeFiles/tree_lib.dir/src/bst/tree.c.i
 .PHONY : src/bst/tree.c.i
 
 src/bst/tree.s: src/bst/tree.c.s
@@ -628,8 +763,7 @@ src/bst/tree.s: src/bst/tree.c.s
 
 # target to generate assembly for a file
 src/bst/tree.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree.dir/build.make CMakeFiles/tree.dir/src/bst/tree.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trees.dir/build.make CMakeFiles/trees.dir/src/bst/tree.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_lib.dir/build.make CMakeFiles/tree_lib.dir/src/bst/tree.c.s
 .PHONY : src/bst/tree.c.s
 
 src/rev/main.o: src/rev/main.c.o
@@ -661,7 +795,7 @@ src/rev/student.o: src/rev/student.c.o
 
 # target to build an object file
 src/rev/student.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/student.dir/build.make CMakeFiles/student.dir/src/rev/student.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_lib.dir/build.make CMakeFiles/student_lib.dir/src/rev/student.c.o
 .PHONY : src/rev/student.c.o
 
 src/rev/student.i: src/rev/student.c.i
@@ -669,7 +803,7 @@ src/rev/student.i: src/rev/student.c.i
 
 # target to preprocess a source file
 src/rev/student.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/student.dir/build.make CMakeFiles/student.dir/src/rev/student.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_lib.dir/build.make CMakeFiles/student_lib.dir/src/rev/student.c.i
 .PHONY : src/rev/student.c.i
 
 src/rev/student.s: src/rev/student.c.s
@@ -677,8 +811,32 @@ src/rev/student.s: src/rev/student.c.s
 
 # target to generate assembly for a file
 src/rev/student.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/student.dir/build.make CMakeFiles/student.dir/src/rev/student.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_lib.dir/build.make CMakeFiles/student_lib.dir/src/rev/student.c.s
 .PHONY : src/rev/student.c.s
+
+tests/avl_test.o: tests/avl_test.c.o
+.PHONY : tests/avl_test.o
+
+# target to build an object file
+tests/avl_test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl_test.dir/build.make CMakeFiles/avl_test.dir/tests/avl_test.c.o
+.PHONY : tests/avl_test.c.o
+
+tests/avl_test.i: tests/avl_test.c.i
+.PHONY : tests/avl_test.i
+
+# target to preprocess a source file
+tests/avl_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl_test.dir/build.make CMakeFiles/avl_test.dir/tests/avl_test.c.i
+.PHONY : tests/avl_test.c.i
+
+tests/avl_test.s: tests/avl_test.c.s
+.PHONY : tests/avl_test.s
+
+# target to generate assembly for a file
+tests/avl_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avl_test.dir/build.make CMakeFiles/avl_test.dir/tests/avl_test.c.s
+.PHONY : tests/avl_test.c.s
 
 tests/bst_test.o: tests/bst_test.c.o
 .PHONY : tests/bst_test.o
@@ -741,13 +899,27 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... arthur_core"
+	@echo "... avl"
+	@echo "... avl_lib"
+	@echo "... avl_test"
 	@echo "... bst_test"
 	@echo "... check"
 	@echo "... checkShared"
 	@echo "... compat"
 	@echo "... student"
+	@echo "... student_lib"
 	@echo "... tree"
-	@echo "... trees"
+	@echo "... tree_lib"
+	@echo "... src/arthur_core/arthur_core.o"
+	@echo "... src/arthur_core/arthur_core.i"
+	@echo "... src/arthur_core/arthur_core.s"
+	@echo "... src/avl/avl.o"
+	@echo "... src/avl/avl.i"
+	@echo "... src/avl/avl.s"
+	@echo "... src/avl/main.o"
+	@echo "... src/avl/main.i"
+	@echo "... src/avl/main.s"
 	@echo "... src/bst/main.o"
 	@echo "... src/bst/main.i"
 	@echo "... src/bst/main.s"
@@ -760,6 +932,9 @@ help:
 	@echo "... src/rev/student.o"
 	@echo "... src/rev/student.i"
 	@echo "... src/rev/student.s"
+	@echo "... tests/avl_test.o"
+	@echo "... tests/avl_test.i"
+	@echo "... tests/avl_test.s"
 	@echo "... tests/bst_test.o"
 	@echo "... tests/bst_test.i"
 	@echo "... tests/bst_test.s"

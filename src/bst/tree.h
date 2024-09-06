@@ -9,6 +9,7 @@ typedef struct node {
   int val;
   struct node *left;
   struct node *right;
+  int height;
 } Node;
 
 typedef struct stack {
