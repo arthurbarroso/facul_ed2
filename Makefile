@@ -140,30 +140,30 @@ arthur_core/fast:
 .PHONY : arthur_core/fast
 
 #=============================================================================
-# Target rules for targets named tree_lib
+# Target rules for targets named bst_lib
 
 # Build rule for target.
-tree_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_lib
-.PHONY : tree_lib
+bst_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bst_lib
+.PHONY : bst_lib
 
 # fast build rule for target.
-tree_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_lib.dir/build.make CMakeFiles/tree_lib.dir/build
-.PHONY : tree_lib/fast
+bst_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst_lib.dir/build.make CMakeFiles/bst_lib.dir/build
+.PHONY : bst_lib/fast
 
 #=============================================================================
-# Target rules for targets named tree
+# Target rules for targets named bst
 
 # Build rule for target.
-tree: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree
-.PHONY : tree
+bst: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bst
+.PHONY : bst
 
 # fast build rule for target.
-tree/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree.dir/build.make CMakeFiles/tree.dir/build
-.PHONY : tree/fast
+bst/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst.dir/build.make CMakeFiles/bst.dir/build
+.PHONY : bst/fast
 
 #=============================================================================
 # Target rules for targets named bst_test
@@ -723,7 +723,7 @@ src/bst/main.o: src/bst/main.c.o
 
 # target to build an object file
 src/bst/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree.dir/build.make CMakeFiles/tree.dir/src/bst/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst.dir/build.make CMakeFiles/bst.dir/src/bst/main.c.o
 .PHONY : src/bst/main.c.o
 
 src/bst/main.i: src/bst/main.c.i
@@ -731,7 +731,7 @@ src/bst/main.i: src/bst/main.c.i
 
 # target to preprocess a source file
 src/bst/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree.dir/build.make CMakeFiles/tree.dir/src/bst/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst.dir/build.make CMakeFiles/bst.dir/src/bst/main.c.i
 .PHONY : src/bst/main.c.i
 
 src/bst/main.s: src/bst/main.c.s
@@ -739,7 +739,7 @@ src/bst/main.s: src/bst/main.c.s
 
 # target to generate assembly for a file
 src/bst/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree.dir/build.make CMakeFiles/tree.dir/src/bst/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst.dir/build.make CMakeFiles/bst.dir/src/bst/main.c.s
 .PHONY : src/bst/main.c.s
 
 src/bst/tree.o: src/bst/tree.c.o
@@ -747,7 +747,7 @@ src/bst/tree.o: src/bst/tree.c.o
 
 # target to build an object file
 src/bst/tree.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_lib.dir/build.make CMakeFiles/tree_lib.dir/src/bst/tree.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst_lib.dir/build.make CMakeFiles/bst_lib.dir/src/bst/tree.c.o
 .PHONY : src/bst/tree.c.o
 
 src/bst/tree.i: src/bst/tree.c.i
@@ -755,7 +755,7 @@ src/bst/tree.i: src/bst/tree.c.i
 
 # target to preprocess a source file
 src/bst/tree.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_lib.dir/build.make CMakeFiles/tree_lib.dir/src/bst/tree.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst_lib.dir/build.make CMakeFiles/bst_lib.dir/src/bst/tree.c.i
 .PHONY : src/bst/tree.c.i
 
 src/bst/tree.s: src/bst/tree.c.s
@@ -763,7 +763,7 @@ src/bst/tree.s: src/bst/tree.c.s
 
 # target to generate assembly for a file
 src/bst/tree.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_lib.dir/build.make CMakeFiles/tree_lib.dir/src/bst/tree.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst_lib.dir/build.make CMakeFiles/bst_lib.dir/src/bst/tree.c.s
 .PHONY : src/bst/tree.c.s
 
 src/rev/main.o: src/rev/main.c.o
@@ -903,14 +903,14 @@ help:
 	@echo "... avl"
 	@echo "... avl_lib"
 	@echo "... avl_test"
+	@echo "... bst"
+	@echo "... bst_lib"
 	@echo "... bst_test"
 	@echo "... check"
 	@echo "... checkShared"
 	@echo "... compat"
 	@echo "... student"
 	@echo "... student_lib"
-	@echo "... tree"
-	@echo "... tree_lib"
 	@echo "... src/arthur_core/arthur_core.o"
 	@echo "... src/arthur_core/arthur_core.i"
 	@echo "... src/arthur_core/arthur_core.s"

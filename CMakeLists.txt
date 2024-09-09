@@ -27,15 +27,15 @@ set_property(TARGET arthur_core
 # executables
 
 # bst
-add_library(tree_lib OBJECT src/bst/tree.c)
-target_include_directories(tree_lib PUBLIC "${CMAKE_SOURCE_DIR}/src/bst")
+add_library(bst_lib OBJECT src/bst/tree.c)
+target_include_directories(bst_lib PUBLIC "${CMAKE_SOURCE_DIR}/src/bst")
 
-add_executable(tree src/bst/main.c)
-target_link_libraries(tree PRIVATE tree_lib)
-target_compile_options(tree PRIVATE -I. -Wall)
+add_executable(bst src/bst/main.c)
+target_link_libraries(bst PRIVATE bst_lib)
+target_compile_options(bst PRIVATE -I. -Wall)
 
 add_executable(bst_test tests/bst_test.c)
-target_link_libraries(bst_test PRIVATE Check::check tree_lib)
+target_link_libraries(bst_test PRIVATE Check::check bst_lib)
 add_test(NAME bst_test COMMAND bst_test)
 
 # Student
