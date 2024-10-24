@@ -244,6 +244,58 @@ avl_test/fast:
 .PHONY : avl_test/fast
 
 #=============================================================================
+# Target rules for targets named redblack_lib
+
+# Build rule for target.
+redblack_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 redblack_lib
+.PHONY : redblack_lib
+
+# fast build rule for target.
+redblack_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redblack_lib.dir/build.make CMakeFiles/redblack_lib.dir/build
+.PHONY : redblack_lib/fast
+
+#=============================================================================
+# Target rules for targets named redblack
+
+# Build rule for target.
+redblack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 redblack
+.PHONY : redblack
+
+# fast build rule for target.
+redblack/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redblack.dir/build.make CMakeFiles/redblack.dir/build
+.PHONY : redblack/fast
+
+#=============================================================================
+# Target rules for targets named heap_lib
+
+# Build rule for target.
+heap_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 heap_lib
+.PHONY : heap_lib
+
+# fast build rule for target.
+heap_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap_lib.dir/build.make CMakeFiles/heap_lib.dir/build
+.PHONY : heap_lib/fast
+
+#=============================================================================
+# Target rules for targets named heap
+
+# Build rule for target.
+heap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 heap
+.PHONY : heap
+
+# fast build rule for target.
+heap/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/build
+.PHONY : heap/fast
+
+#=============================================================================
 # Target rules for targets named Experimental
 
 # Build rule for target.
@@ -766,6 +818,102 @@ src/bst/tree.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst_lib.dir/build.make CMakeFiles/bst_lib.dir/src/bst/tree.c.s
 .PHONY : src/bst/tree.c.s
 
+src/heap/heap.o: src/heap/heap.c.o
+.PHONY : src/heap/heap.o
+
+# target to build an object file
+src/heap/heap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap_lib.dir/build.make CMakeFiles/heap_lib.dir/src/heap/heap.c.o
+.PHONY : src/heap/heap.c.o
+
+src/heap/heap.i: src/heap/heap.c.i
+.PHONY : src/heap/heap.i
+
+# target to preprocess a source file
+src/heap/heap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap_lib.dir/build.make CMakeFiles/heap_lib.dir/src/heap/heap.c.i
+.PHONY : src/heap/heap.c.i
+
+src/heap/heap.s: src/heap/heap.c.s
+.PHONY : src/heap/heap.s
+
+# target to generate assembly for a file
+src/heap/heap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap_lib.dir/build.make CMakeFiles/heap_lib.dir/src/heap/heap.c.s
+.PHONY : src/heap/heap.c.s
+
+src/heap/main.o: src/heap/main.c.o
+.PHONY : src/heap/main.o
+
+# target to build an object file
+src/heap/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/heap/main.c.o
+.PHONY : src/heap/main.c.o
+
+src/heap/main.i: src/heap/main.c.i
+.PHONY : src/heap/main.i
+
+# target to preprocess a source file
+src/heap/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/heap/main.c.i
+.PHONY : src/heap/main.c.i
+
+src/heap/main.s: src/heap/main.c.s
+.PHONY : src/heap/main.s
+
+# target to generate assembly for a file
+src/heap/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/heap/main.c.s
+.PHONY : src/heap/main.c.s
+
+src/redblack/main.o: src/redblack/main.c.o
+.PHONY : src/redblack/main.o
+
+# target to build an object file
+src/redblack/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redblack.dir/build.make CMakeFiles/redblack.dir/src/redblack/main.c.o
+.PHONY : src/redblack/main.c.o
+
+src/redblack/main.i: src/redblack/main.c.i
+.PHONY : src/redblack/main.i
+
+# target to preprocess a source file
+src/redblack/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redblack.dir/build.make CMakeFiles/redblack.dir/src/redblack/main.c.i
+.PHONY : src/redblack/main.c.i
+
+src/redblack/main.s: src/redblack/main.c.s
+.PHONY : src/redblack/main.s
+
+# target to generate assembly for a file
+src/redblack/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redblack.dir/build.make CMakeFiles/redblack.dir/src/redblack/main.c.s
+.PHONY : src/redblack/main.c.s
+
+src/redblack/redblack.o: src/redblack/redblack.c.o
+.PHONY : src/redblack/redblack.o
+
+# target to build an object file
+src/redblack/redblack.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redblack_lib.dir/build.make CMakeFiles/redblack_lib.dir/src/redblack/redblack.c.o
+.PHONY : src/redblack/redblack.c.o
+
+src/redblack/redblack.i: src/redblack/redblack.c.i
+.PHONY : src/redblack/redblack.i
+
+# target to preprocess a source file
+src/redblack/redblack.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redblack_lib.dir/build.make CMakeFiles/redblack_lib.dir/src/redblack/redblack.c.i
+.PHONY : src/redblack/redblack.c.i
+
+src/redblack/redblack.s: src/redblack/redblack.c.s
+.PHONY : src/redblack/redblack.s
+
+# target to generate assembly for a file
+src/redblack/redblack.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redblack_lib.dir/build.make CMakeFiles/redblack_lib.dir/src/redblack/redblack.c.s
+.PHONY : src/redblack/redblack.c.s
+
 src/rev/main.o: src/rev/main.c.o
 .PHONY : src/rev/main.o
 
@@ -909,6 +1057,10 @@ help:
 	@echo "... check"
 	@echo "... checkShared"
 	@echo "... compat"
+	@echo "... heap"
+	@echo "... heap_lib"
+	@echo "... redblack"
+	@echo "... redblack_lib"
 	@echo "... student"
 	@echo "... student_lib"
 	@echo "... src/arthur_core/arthur_core.o"
@@ -926,6 +1078,18 @@ help:
 	@echo "... src/bst/tree.o"
 	@echo "... src/bst/tree.i"
 	@echo "... src/bst/tree.s"
+	@echo "... src/heap/heap.o"
+	@echo "... src/heap/heap.i"
+	@echo "... src/heap/heap.s"
+	@echo "... src/heap/main.o"
+	@echo "... src/heap/main.i"
+	@echo "... src/heap/main.s"
+	@echo "... src/redblack/main.o"
+	@echo "... src/redblack/main.i"
+	@echo "... src/redblack/main.s"
+	@echo "... src/redblack/redblack.o"
+	@echo "... src/redblack/redblack.i"
+	@echo "... src/redblack/redblack.s"
 	@echo "... src/rev/main.o"
 	@echo "... src/rev/main.i"
 	@echo "... src/rev/main.s"

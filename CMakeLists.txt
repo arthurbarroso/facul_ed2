@@ -57,6 +57,24 @@ add_executable(avl_test tests/avl_test.c)
 target_link_libraries(avl_test PRIVATE Check::check avl_lib arthur_core)
 add_test(NAME avl_test COMMAND avl_test)
 
+# RED black
+add_library(redblack_lib OBJECT src/redblack/redblack.c)
+target_include_directories(redblack_lib PUBLIC "${CMAKE_SOURCE_DIR}/src/redblack")
+target_link_libraries(redblack_lib PRIVATE arthur_core)
+
+add_executable(redblack src/redblack/main.c)
+target_link_libraries(redblack PRIVATE redblack_lib arthur_core)
+target_compile_options(redblack PRIVATE -I. -Wall)
+
+# Heap
+add_library(heap_lib OBJECT src/heap/heap.c)
+target_include_directories(heap_lib PUBLIC "${CMAKE_SOURCE_DIR}/src/heap")
+target_link_libraries(heap_lib PRIVATE arthur_core)
+
+add_executable(heap src/heap/main.c)
+target_link_libraries(heap PRIVATE heap_lib arthur_core)
+target_compile_options(heap PRIVATE -I. -Wall)
+
 # add_library(avl_lib OBJECT src/avl/avl.c)
 # set_property(TARGET avl_lib
 #   PROPERTY
