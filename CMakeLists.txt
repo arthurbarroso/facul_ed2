@@ -57,6 +57,26 @@ add_executable(avl_test tests/avl_test.c)
 target_link_libraries(avl_test PRIVATE Check::check avl_lib arthur_core)
 add_test(NAME avl_test COMMAND avl_test)
 
+
+# TREAP
+
+add_library(treap_lib OBJECT src/treap/treap.c)
+target_include_directories(treap_lib PUBLIC "${CMAKE_SOURCE_DIR}/src/treap")
+target_link_libraries(treap_lib PRIVATE arthur_core)
+
+add_executable(treap src/treap/main.c)
+target_link_libraries(treap PRIVATE treap_lib arthur_core)
+target_compile_options(treap PRIVATE -I. -Wall)
+
+# BTREE
+add_library(btree_lib OBJECT src/btree/btree.c)
+target_include_directories(btree_lib PUBLIC "${CMAKE_SOURCE_DIR}/src/btree")
+target_link_libraries(btree_lib PRIVATE arthur_core)
+
+add_executable(btree src/btree/main.c)
+target_link_libraries(btree PRIVATE btree_lib arthur_core)
+target_compile_options(btree PRIVATE -I. -Wall)
+
 # add_library(avl_lib OBJECT src/avl/avl.c)
 # set_property(TARGET avl_lib
 #   PROPERTY

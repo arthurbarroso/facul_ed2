@@ -244,6 +244,58 @@ avl_test/fast:
 .PHONY : avl_test/fast
 
 #=============================================================================
+# Target rules for targets named treap_lib
+
+# Build rule for target.
+treap_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 treap_lib
+.PHONY : treap_lib
+
+# fast build rule for target.
+treap_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/treap_lib.dir/build.make CMakeFiles/treap_lib.dir/build
+.PHONY : treap_lib/fast
+
+#=============================================================================
+# Target rules for targets named treap
+
+# Build rule for target.
+treap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 treap
+.PHONY : treap
+
+# fast build rule for target.
+treap/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/treap.dir/build.make CMakeFiles/treap.dir/build
+.PHONY : treap/fast
+
+#=============================================================================
+# Target rules for targets named btree_lib
+
+# Build rule for target.
+btree_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 btree_lib
+.PHONY : btree_lib
+
+# fast build rule for target.
+btree_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/btree_lib.dir/build.make CMakeFiles/btree_lib.dir/build
+.PHONY : btree_lib/fast
+
+#=============================================================================
+# Target rules for targets named btree
+
+# Build rule for target.
+btree: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 btree
+.PHONY : btree
+
+# fast build rule for target.
+btree/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/btree.dir/build.make CMakeFiles/btree.dir/build
+.PHONY : btree/fast
+
+#=============================================================================
 # Target rules for targets named Experimental
 
 # Build rule for target.
@@ -766,6 +818,54 @@ src/bst/tree.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bst_lib.dir/build.make CMakeFiles/bst_lib.dir/src/bst/tree.c.s
 .PHONY : src/bst/tree.c.s
 
+src/btree/btree.o: src/btree/btree.c.o
+.PHONY : src/btree/btree.o
+
+# target to build an object file
+src/btree/btree.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/btree_lib.dir/build.make CMakeFiles/btree_lib.dir/src/btree/btree.c.o
+.PHONY : src/btree/btree.c.o
+
+src/btree/btree.i: src/btree/btree.c.i
+.PHONY : src/btree/btree.i
+
+# target to preprocess a source file
+src/btree/btree.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/btree_lib.dir/build.make CMakeFiles/btree_lib.dir/src/btree/btree.c.i
+.PHONY : src/btree/btree.c.i
+
+src/btree/btree.s: src/btree/btree.c.s
+.PHONY : src/btree/btree.s
+
+# target to generate assembly for a file
+src/btree/btree.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/btree_lib.dir/build.make CMakeFiles/btree_lib.dir/src/btree/btree.c.s
+.PHONY : src/btree/btree.c.s
+
+src/btree/main.o: src/btree/main.c.o
+.PHONY : src/btree/main.o
+
+# target to build an object file
+src/btree/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/btree.dir/build.make CMakeFiles/btree.dir/src/btree/main.c.o
+.PHONY : src/btree/main.c.o
+
+src/btree/main.i: src/btree/main.c.i
+.PHONY : src/btree/main.i
+
+# target to preprocess a source file
+src/btree/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/btree.dir/build.make CMakeFiles/btree.dir/src/btree/main.c.i
+.PHONY : src/btree/main.c.i
+
+src/btree/main.s: src/btree/main.c.s
+.PHONY : src/btree/main.s
+
+# target to generate assembly for a file
+src/btree/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/btree.dir/build.make CMakeFiles/btree.dir/src/btree/main.c.s
+.PHONY : src/btree/main.c.s
+
 src/rev/main.o: src/rev/main.c.o
 .PHONY : src/rev/main.o
 
@@ -813,6 +913,54 @@ src/rev/student.s: src/rev/student.c.s
 src/rev/student.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_lib.dir/build.make CMakeFiles/student_lib.dir/src/rev/student.c.s
 .PHONY : src/rev/student.c.s
+
+src/treap/main.o: src/treap/main.c.o
+.PHONY : src/treap/main.o
+
+# target to build an object file
+src/treap/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/treap.dir/build.make CMakeFiles/treap.dir/src/treap/main.c.o
+.PHONY : src/treap/main.c.o
+
+src/treap/main.i: src/treap/main.c.i
+.PHONY : src/treap/main.i
+
+# target to preprocess a source file
+src/treap/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/treap.dir/build.make CMakeFiles/treap.dir/src/treap/main.c.i
+.PHONY : src/treap/main.c.i
+
+src/treap/main.s: src/treap/main.c.s
+.PHONY : src/treap/main.s
+
+# target to generate assembly for a file
+src/treap/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/treap.dir/build.make CMakeFiles/treap.dir/src/treap/main.c.s
+.PHONY : src/treap/main.c.s
+
+src/treap/treap.o: src/treap/treap.c.o
+.PHONY : src/treap/treap.o
+
+# target to build an object file
+src/treap/treap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/treap_lib.dir/build.make CMakeFiles/treap_lib.dir/src/treap/treap.c.o
+.PHONY : src/treap/treap.c.o
+
+src/treap/treap.i: src/treap/treap.c.i
+.PHONY : src/treap/treap.i
+
+# target to preprocess a source file
+src/treap/treap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/treap_lib.dir/build.make CMakeFiles/treap_lib.dir/src/treap/treap.c.i
+.PHONY : src/treap/treap.c.i
+
+src/treap/treap.s: src/treap/treap.c.s
+.PHONY : src/treap/treap.s
+
+# target to generate assembly for a file
+src/treap/treap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/treap_lib.dir/build.make CMakeFiles/treap_lib.dir/src/treap/treap.c.s
+.PHONY : src/treap/treap.c.s
 
 tests/avl_test.o: tests/avl_test.c.o
 .PHONY : tests/avl_test.o
@@ -906,11 +1054,15 @@ help:
 	@echo "... bst"
 	@echo "... bst_lib"
 	@echo "... bst_test"
+	@echo "... btree"
+	@echo "... btree_lib"
 	@echo "... check"
 	@echo "... checkShared"
 	@echo "... compat"
 	@echo "... student"
 	@echo "... student_lib"
+	@echo "... treap"
+	@echo "... treap_lib"
 	@echo "... src/arthur_core/arthur_core.o"
 	@echo "... src/arthur_core/arthur_core.i"
 	@echo "... src/arthur_core/arthur_core.s"
@@ -926,12 +1078,24 @@ help:
 	@echo "... src/bst/tree.o"
 	@echo "... src/bst/tree.i"
 	@echo "... src/bst/tree.s"
+	@echo "... src/btree/btree.o"
+	@echo "... src/btree/btree.i"
+	@echo "... src/btree/btree.s"
+	@echo "... src/btree/main.o"
+	@echo "... src/btree/main.i"
+	@echo "... src/btree/main.s"
 	@echo "... src/rev/main.o"
 	@echo "... src/rev/main.i"
 	@echo "... src/rev/main.s"
 	@echo "... src/rev/student.o"
 	@echo "... src/rev/student.i"
 	@echo "... src/rev/student.s"
+	@echo "... src/treap/main.o"
+	@echo "... src/treap/main.i"
+	@echo "... src/treap/main.s"
+	@echo "... src/treap/treap.o"
+	@echo "... src/treap/treap.i"
+	@echo "... src/treap/treap.s"
 	@echo "... tests/avl_test.o"
 	@echo "... tests/avl_test.i"
 	@echo "... tests/avl_test.s"
