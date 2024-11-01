@@ -33,3 +33,19 @@ cmake .
 cmake --build --target avl
 ./out/avl
 ```
+
+#### 3.3 (TREAP):
+
+``` sh
+cmake .
+cmake --build --target treap
+./out/treap
+```
+
+#### 3.4 (BTREE):
+
+``` sh
+cmake .
+cmake --build --target btree
+./out/btree
+```
